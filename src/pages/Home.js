@@ -1,17 +1,10 @@
-/// Home.js
+// Home.js
 import React from 'react';
 import styled from 'styled-components';
 import FeaturedSolution from '../components/FeaturedSolution';
 import BlogPost from '../components/BlogPost';
 import Testimonial from '../components/Testimonial';
-import Services from '../pages/Services'; // Import the Services component
 import { Link } from 'react-router-dom';
-
-const HomeSection = styled.div`
-  background-color: #f8f8f8;
-  color: #333;
-  padding: 20px;
-`;
 
 const HeroSection = styled.section`
   background-color: #007bff;
@@ -125,7 +118,7 @@ const solutionsData = [
     id: 1,
     title: 'Cloud Integration',
     description: 'Seamlessly integrate cloud solutions for improved scalability and flexibility.',
-   
+
   },
   // Add more technology solutions
 ];
@@ -152,10 +145,10 @@ const testimonialsData = [
 
 const Home = () => {
   return (
-    <HomeSection>
+    <div>
       <HeroSection>
         <h1>Welcome to BuildMe</h1>
-        <p>Empowering your business with revolutionary technology solutions.</p>
+        <p>Empowering your business with innovative technology solutions.</p>
         <Link to="/services">
           <button onClick={heroCtaHandler}>Explore Our Services</button>
         </Link>
@@ -184,15 +177,14 @@ const Home = () => {
           ))}
         </div>
       </TestimonialsSection>
-      <Services /> {/* Added the Services component */}
       <CtaSection>
-        <h2>Ready to Revolutionize Your Business?</h2>
-        <p>Contact us today and let's discuss how BuildMe.Online can drive your success.</p>
+        <h2>Ready to Transform Your Business?</h2>
+        <p>Contact us today and let's discuss how buildme can drive your success.</p>
         <Link to="/contact">
           <button onClick={heroCtaHandler}>Get in Touch</button>
         </Link>
       </CtaSection>
-    </HomeSection>
+    </div>
   );
 };
 
